@@ -33,7 +33,9 @@ window.onload = (e) => {
 	}, { passive: false });
 
 	function transNum(number) {
-		return (window.innerHeight - ((carrot.offsetHeight + carrot.offsetTop + rabit.offsetHeight) * number)) * -1;
+		let r = (window.innerHeight - ((carrot.offsetHeight + carrot.offsetTop + rabit.offsetHeight) * number)) * -1;
+		let result = r <= 0 ? r : (rabit.offsetHeight * .4) * -1;
+		return result;
 	}
 	/* ふつう */
 	njy = transNum(1.1);
@@ -235,15 +237,18 @@ window.onload = (e) => {
 
 	btn.onmousedown = (e) => {
 		e.preventDefault();
+		btn.style.backgroundColor = "#aa4802";
 		let ip = document.getElementsByTagName('input');
 		feel = ip[0].checked ? 1 : ip[1].checked ? 2 : 3;
 		flag = true;
 		btn.style.color = '#fff';
-		btn.style.background = '#f56500';
 	}
 
 	btn.onmouseup = (e) => {
 		e.preventDefault();
+
+
+		btn.style.background = '#f56500';
 		if (flag && !playing) {
 			btn.innerText = 'STOP!';
 			setRadio(false);

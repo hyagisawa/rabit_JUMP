@@ -45,35 +45,34 @@ label {
     position: relative;
     width: 200px;
     height: 200px;
-    margin-top: 3%;
+    margin-top: 2rem;
+    margin-left: 2rem;
 }
-
-
-/* .center-wrapper { */
-    /* bottom: 0; */
-/* } */
 
 
 #grass {
     width: 100vw;
+    height: auto;
     position: fixed;
     bottom: 0;
 }
 
 #rabit {
     width: 20vw;
-    height: 20vw;
+    height: auto;
+    max-height: 200px;
     padding: 0 40%;
     position: fixed;
     bottom: 0;
 }
 
 #carrot {
-    z-index: 1000;
+    z-index: -1;
     opacity: 0;
     bottom: 50%;
     width: 12vw;
-    height: 12vw;
+    max-width: 80px;
+    height: auto;
     padding: 0 44%;
     position: fixed;
     filter: drop-shadow(0px 0px 5px #888);
@@ -93,6 +92,8 @@ label {
     color: #fff;
     background: #f56500;
 } */
+
+
 
 @font-face {
     font-family: "syowa";
