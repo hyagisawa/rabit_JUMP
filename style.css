@@ -4,6 +4,7 @@ html,body {
     overflow: hidden;
     font-size: 62.5%;
     user-select: none;
+    margin: 0px;
 }
 
 body:after {
@@ -44,13 +45,9 @@ label {
     position: relative;
     width: 200px;
     height: 200px;
-    margin-top: 3%;
+    margin-top: 2rem;
+    margin-left: 2rem;
 }
-
-
-/* .center-wrapper { */
-    /* bottom: 0; */
-/* } */
 
 
 #grass {
@@ -62,16 +59,18 @@ label {
 #rabit {
     width: 20vw;
     height: 20vw;
+    max-height: 200px;
     padding: 0 40%;
     position: fixed;
     bottom: 0;
 }
 
 #carrot {
-    z-index: 1000;
+    z-index: -1;
     opacity: 0;
     bottom: 50%;
     width: 12vw;
+    max-width: 100px;
     height: 12vw;
     padding: 0 44%;
     position: fixed;
